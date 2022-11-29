@@ -1,4 +1,3 @@
-import Link from "next/link";
 import EventItem from "./EventItem";
 import style from "./EventList.module.css";
 
