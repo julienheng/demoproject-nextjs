@@ -5,6 +5,7 @@ import { Fragment } from "react";
 import ResultTitle from "../../components/events/ResultTitle";
 import Button from "../../components/ui/Button";
 import ErrorAlert from "../../components/ui/ErrorAlert";
+import Head from "next/head";
 
 function FilteredEventsPage(props) {
   const router = useRouter();
@@ -19,6 +20,13 @@ function FilteredEventsPage(props) {
   // const filteredMonth = filterData[1];
   // const numYear = +filteredYear;
   // const numMonth = +filteredMonth;
+
+  const pageHeadData = (
+    <Head>
+      <title>Filtered Event</title>
+      <meta name="description" content={`All events for ${numMonth}/${numYear}`} />
+    </Head>
+  );
 
   if (props.hasError) {
     return (
